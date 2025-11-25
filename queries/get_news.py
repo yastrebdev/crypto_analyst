@@ -60,4 +60,4 @@ def get_news():
 
 
 news = get_news()
-news.to_csv("data/news_from_newsapi.csv")
+news.to_csv("data/news_from_newsapi.csv", index=False)

@@ -18,8 +18,8 @@ url = f"{settings.BASE_COINS_API_URL}{settings.COINS_MARKET_CHART}"
 ids = id_parser(symbols, names)
 
 df_coins_ids = pd.DataFrame({
-    "coin_int_id": range(1, len(ids) + 1),
-    "coin_api_id": ids
+    "id": range(1, len(ids) + 1),
+    "api_id": ids
 }).reset_index()
 
 
@@ -46,7 +46,7 @@ def get_market_data():
                                  df_volumes.set_index("timestamp")["total_volumes"]],
                                 axis=1).reset_index()
 
-            df_coin["coin_int_id"] = count
+            df_coin["id"] = count
             dfs.append(df_coin)
 
         except Exception as e:
