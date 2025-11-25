@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.env
+*.venv
+env/
+venv/
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.bak
+
+# Данные и базы, которые не нужны в репозитории
+data/*.csv
+!data/coins_ids.csv
+!data/coins_list.csv
+!data/coins_market_data.csv
+!data/news_from_newsapi.csv
+data/*.json
+db/*.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Сборки и дистрибутивы
+build/
+dist/
+*.egg-info/
